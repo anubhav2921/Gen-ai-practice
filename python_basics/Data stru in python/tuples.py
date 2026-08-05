@@ -48,6 +48,12 @@ nested_list = [(1,2,3,4,5),(2,3,4,5,6),(7,8,9,78)]
 
 print(type(nested_list))
 
+#tuple
+
+
+
+
+
 
 
 

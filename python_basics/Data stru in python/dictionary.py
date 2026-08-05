@@ -56,6 +56,10 @@ M_dic2 = {"d":6,"e":7,"f":8}
 mmearge_dictionary = {**M_dic1,**M_dic2}
 print(mmearge_dictionary)
 
+# Some  bultion function in our python dictionary
+# sum()  , max(),  len() etc
+
+
 
 
 

@@ -59,11 +59,15 @@ print(list_item)
 list_fruits = ['apple','bananna','grapes','gavava']
 length_list =[len(word) for word in list_fruits]
 print(length_list)
+
 #nested list comprihention
-#pairin kr sakte hai yaha aishe 
+#pairing kr sakte hai yaha aishe 
 
 pair = [[i,j] for i in list_fruits for j in length_list]
 print(pair)
+
+
+
 
 
 
