@@ -1,0 +1,1 @@
+git -C "c:/practice-gen-ai" add . ; git -C "c:/practice-gen-ai" commit -m "Add python basics exercises" ; git -C "c:/practice-gen-ai" push origin main
