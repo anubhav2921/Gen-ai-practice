@@ -1,1 +1,5 @@
-print(list(map(lambda x:x**2,[1,4,6,8,10])))
+numbers = [10, 15, 20, 25, 30]
+
+# result = filter(lambda x: x % 2 == 0, numbers)
+
+# print(list(result))
