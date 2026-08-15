@@ -10,7 +10,6 @@ output=square(no)
 print(f"the square of {no} is {output}")
 
 
-
 #---> by using lambda function
 
 lambda_function = lambda x:x**2

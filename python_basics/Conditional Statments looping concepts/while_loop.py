@@ -86,15 +86,7 @@
 
 # await     --> wait for an asynchronous operation
 
-i = 0
 
-while i < 50:
-    if i == 20:
-        pass  # do nothing
-
-        print(i)
-
-    i += 1  # increase i by 1
 
 
 

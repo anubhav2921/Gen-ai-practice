@@ -14,3 +14,5 @@ def translater(English_text):
 
 input_en = input("Enter your english word  ")  
 translater(input_en)
+
+
