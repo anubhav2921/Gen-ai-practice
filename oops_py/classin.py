@@ -8,3 +8,6 @@ print(car_2.color)
 
 
 #----> Type of constracter
+
+#Default constracter
+#  paramitrized  Constracter

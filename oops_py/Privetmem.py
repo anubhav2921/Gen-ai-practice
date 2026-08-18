@@ -6,7 +6,7 @@ class Avenger:
 avenger = Avenger("captain", "8052828893")
 print(dir(avenger))
 print(avenger.name)
-print(avenger.get__phoneno)  #AttributeError: 'Avenger' object has no attribute '__phoneno'
+print(avenger.__phoneno)  #AttributeError: 'Avenger' object has no attribute '__phoneno'
 
 #geeter mathod ---> help to acs the privet data
 

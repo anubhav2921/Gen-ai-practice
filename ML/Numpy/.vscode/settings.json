@@ -1,0 +1,7 @@
+{
+  "python.defaultInterpreterPath": "c:/practice-gen-ai/ML/Numpy/.venv-1/Scripts/python.exe",
+  "python.analysis.extraPaths": [
+    "c:/practice-gen-ai/ML/Numpy"
+  ],
+  "python.terminal.activateEnvironment": true
+}

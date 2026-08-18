@@ -22,3 +22,4 @@ print(s1)
 # __eq__()	Defines object1 == object2
 # __lt__()	Defines object1 < object2
 # __gt__()	Defines object1 > object2
+
