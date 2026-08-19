@@ -19,3 +19,6 @@ print("Median subscribers:", df["subscribers"].median())
 # max()     → highest
 # min()     → lowest
 # median()  → middle value
+
+
+print(df["subscribers"].std())
