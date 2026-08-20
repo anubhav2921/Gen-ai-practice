@@ -2,7 +2,12 @@ import pandas as pd
 
 df = pd.read_csv("youtube_tech_channels_20251120_133753.csv")
 
-print("Average:", df["subscribers"].mean())
+
+avg = df["subscribers"].mean()
+
+print("Average:", avg)
+
+print(df["subscribers"].describe())
 print("\n------>std() — Standard deviation<--------\n")
 print(df[
     ["subscribers", "total_views", "total_videos"]
