@@ -21,4 +21,4 @@ print("Median subscribers:", df["subscribers"].median())
 # median()  → middle value
 
 
-print(df["subscribers"].std())
+
