@@ -42,3 +42,18 @@ for col in df.columns:
 # 10. Target distribution
 print("\n--- DEPRESSION DISTRIBUTION ---")
 print(df["Depression"].value_counts())
+
+
+print("\n------->Pandas sample() function, it is used to randomly select rows from a DataFrame.<---------------------\n")
+
+print(df.sample(7))
+
+import pandas as pd
+
+data = {
+    "Name": ["Amit", "Rahul", None, "Priya", "Neha"],
+    "Age": [20, None, 22, 21, None],
+    "Marks": [85, 90, None, 78, 95]
+}
+
+print(pd.DataFrame(data))
