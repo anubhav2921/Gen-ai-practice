@@ -1,0 +1,302 @@
+Matplotlib Important Functions --- Quick Notes
+
+1. Import Matplotlib
+
+import matplotlib.pyplot as plt
+
+2. Basic Plot
+
+plt.plot(x, y)
+
+Creates a line plot.
+
+3. Line Plot with Formatting
+
+plt.plot(x, y, color="blue", linewidth=2, linestyle="--",
+         marker="o", markersize=6)
+
+Common options: - color --- line color - linewidth --- line
+thickness - linestyle --- -, --, :, -. - marker --- o,
+s, ^, *, x - markersize --- marker size
+
+4. Scatter Plot
+
+plt.scatter(x, y)
+
+Useful for showing relationships between two variables.
+
+Example:
+
+plt.scatter(x, y, color="red", marker="o")
+
+5. Bar Chart
+
+plt.bar(categories, values)
+
+Horizontal bar:
+
+plt.barh(categories, values)
+
+6. Histogram
+
+plt.hist(data, bins=10)
+
+Used to show the distribution of numerical data.
+
+Useful options:
+
+plt.hist(data, bins=10, edgecolor="black", alpha=0.7)
+
+7. Pie Chart
+
+plt.pie(values, labels=labels, autopct="%1.1f%%")
+
+Example:
+
+plt.pie(values, labels=labels, autopct="%1.1f%%",
+        startangle=90)
+
+8. Labels
+
+plt.xlabel("X Axis")
+plt.ylabel("Y Axis")
+
+9. Title
+
+plt.title("My Chart")
+
+Formatting:
+
+plt.title("My Chart", fontsize=16, color="blue")
+
+10. Legend
+
+plt.legend()
+
+With labels:
+
+plt.plot(x, y, label="Training Loss")
+plt.legend()
+
+11. Grid
+
+plt.grid(True)
+
+Formatted grid:
+
+plt.grid(True, linestyle="--", alpha=0.5)
+
+12. X and Y Axis Limits
+
+plt.xlim(0, 10)
+plt.ylim(0, 100)
+
+13. Ticks
+
+plt.xticks([1, 2, 3, 4, 5])
+plt.yticks([0, 20, 40, 60, 80, 100])
+
+Rotate x-axis labels:
+
+plt.xticks(rotation=45)
+
+14. Figure Size
+
+plt.figure(figsize=(10, 6))
+
+15. Multiple Lines
+
+plt.plot(x, y1, label="Model 1")
+plt.plot(x, y2, label="Model 2")
+plt.legend()
+
+16. Multiple Subplots
+
+plt.subplot(2, 1, 1)
+plt.plot(x, y)
+
+plt.subplot(2, 1, 2)
+plt.bar(x, y)
+
+Recommended modern approach:
+
+fig, ax = plt.subplots(2, 1)
+ax[0].plot(x, y)
+ax[1].bar(x, y)
+
+17. Add Text
+
+plt.text(x, y, "Important Point")
+
+18. Add Annotation
+
+plt.annotate("Maximum", xy=(x, y))
+
+19. Vertical and Horizontal Lines
+
+plt.axvline(x=5, linestyle="--")
+plt.axhline(y=10, linestyle="--")
+
+20. Fill Area
+
+plt.fill_between(x, y, alpha=0.3)
+
+21. Set Axis Labels Together
+
+plt.xlabel("Epoch")
+plt.ylabel("Loss")
+
+22. Save a Figure
+
+plt.savefig("chart.png")
+
+High-quality image:
+
+plt.savefig("chart.png", dpi=300, bbox_inches="tight")
+
+23. Display the Figure
+
+plt.show()
+
+24. Clear the Current Figure
+
+plt.clf()
+
+25. Close a Figure
+
+plt.close()
+
+26. Common Colors
+
+red       r
+green     g
+blue      b
+cyan      c
+magenta   m
+yellow    y
+black     k
+white     w
+
+You can also use names:
+
+color="orange"
+color="purple"
+color="pink"
+color="brown"
+
+27. Common Markers
+
+'o'  Circle
+'s'  Square
+'^'  Triangle
+'*'  Star
+'x'  X
+'+'  Plus
+'.'  Point
+'D'  Diamond
+
+28. Common Line Styles
+
+'-'   Solid
+'--'  Dashed
+':'   Dotted
+'-.'  Dash-dot
+
+29. Transparency
+
+plt.plot(x, y, alpha=0.5)
+
+alpha ranges from 0 (transparent) to 1 (opaque).
+
+30. Style
+
+plt.style.use("ggplot")
+
+Other commonly used styles can be checked with:
+
+print(plt.style.available)
+
+31. Complete Line Plot Example
+
+import matplotlib.pyplot as plt
+
+epochs = [1, 2, 3, 4, 5]
+loss = [0.9, 0.7, 0.55, 0.4, 0.3]
+
+plt.figure(figsize=(8, 5))
+
+plt.plot(
+    epochs,
+    loss,
+    color="blue",
+    marker="o",
+    markersize=8,
+    markerfacecolor="red",
+    linewidth=3,
+    label="Training Loss"
+)
+
+plt.xlabel("Epoch", fontsize=12, color="green")
+plt.ylabel("Loss", fontsize=12, color="purple")
+plt.title("GenAI Model Training Loss", fontsize=16, color="darkorange")
+
+plt.grid(True, linestyle="--", alpha=0.5)
+plt.legend()
+
+plt.savefig("genai_training_loss.png", dpi=300, bbox_inches="tight")
+plt.show()
+
+32. Quick Function Cheat Sheet
+
+Function               Purpose
+
+plt.plot()           Line chart
+plt.scatter()        Scatter plot
+plt.bar()            Vertical bar chart
+plt.barh()           Horizontal bar chart
+plt.hist()           Histogram
+plt.pie()            Pie chart
+plt.xlabel()         X-axis label
+plt.ylabel()         Y-axis label
+plt.title()          Chart title
+plt.legend()         Legend
+plt.grid()           Grid
+plt.xlim()           X-axis limits
+plt.ylim()           Y-axis limits
+plt.xticks()         X-axis ticks
+plt.yticks()         Y-axis ticks
+plt.figure()         Create/configure figure
+plt.subplot()        Create subplot
+plt.subplots()       Create figure + axes
+plt.text()           Add text
+plt.annotate()       Add annotation
+plt.axvline()        Vertical reference line
+plt.axhline()        Horizontal reference line
+plt.fill_between()   Fill area
+plt.savefig()        Save chart
+plt.show()           Display chart
+plt.clf()            Clear figure
+plt.close()          Close figure
+
+33. Basic Workflow to Remember
+
+import matplotlib.pyplot as plt
+
+# Data
+x = [1, 2, 3, 4, 5]
+y = [2, 4, 3, 7, 6]
+
+# Create plot
+plt.plot(x, y)
+
+# Add information
+plt.xlabel("X")
+plt.ylabel("Y")
+plt.title("My Plot")
+
+# Improve appearance
+plt.grid(True)
+plt.legend()
+
+# Show
+plt.show()
