@@ -1,12 +1,17 @@
-import mysql.connector
+import requests
+import pandas as pd
 
-conn = mysql.connector.connect(
-    host="localhost",
-    user="root",
-    password="NewStrongPassword_2026!",
-    
-)
+url = "https://jsonplaceholder.typicode.com/posts"
 
-print("Connected:", conn.is_connected())
-conn.close()
+response = requests.get(url)
 
+print("Status Code:", response.status_code)
+
+if response.status_code == 200:
+    data = response.json()
+
+    df = pd.DataFrame(data)
+
+    print(df)
+else:
+    print("API request failed")
